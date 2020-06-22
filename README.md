@@ -1,61 +1,40 @@
-# _Project Template_
+# Coin Counter - React Week 1
 
-#### _A set of folders and files comprising the basic needs for a new Epicodus project. Files have the necessary plugins, rules, and imports pre-configured._
-
-#### By _**Daniel Merys**_
+## by Dan Merys & Ethan Firpo (6/22/2020)
 
 ## Description
 
-_This repository allows you to pull the files for use in your own project, including (__ tests __/.., src/.., .babelrc, .eslintrc, .gitignore, package-lock.json, package.json, webpack.config.js)_
+This site is built to practice using a functional programming schema, including variable immutability, function currying, writing pure functions, declarative programming, and recursion. It takes an inputted dollar amount and outputs the smallest number of coins, in what denominations, is needed to add up to that amount.
+## Technology
 
-## Setup/Installation Requirements
+#### JavaScript
 
-1. Fork this repository to your github account.
-2. Copy it from your github to your machine
-3. Rename files ("__ tests __/app-name.test.js" and "src/app-name.js") to match your project.
-4. Be sure to update the git repository and remote repository you are committing to.
-* check origin
-`git remote -v`
-* if origin is not your repository, set origin to your repository
-`git remote set-url origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git`  
-5. Update the author and project name in both package.json and webpack.config.js
-6. Install packages
-`run $ npm install`
-7. Prepare repository to deploy
-`run $ npm build`
+## Specs
 
-## Known Bugs
+| Behavior | Input | Output|
+|-------|-------|-------|
+|Program will accept input in form of a currency amount|$5.83|$5.83|
+|Program will count how many quarters can "fit" in given amount | $5.83| 23|
+|Program will subtract that amount in quarters from initial input| $5.83 - $5.75| $0.08|
+|Program will count how many dimes can "fit" in the remaining amount after previous step| $0.08| 0|
+|Program will subtract that amount in dimes from new remainder| $0.08 - $0.00| $0.08|
+|Program will count how many nickles can "fit" in the remaining amount from previous step| $.08| 1|
+|Program will subract that amount in nickles from new remainder | $0.08 - $0.05| $0.03|
+|Program will count how many pennies can "fit" in the remaining amount from previous step| $.03| 3|
+|Program will output how many quarters, dimes, nickles, and pennies "fit" in initial input| $5.83| Quarters: 23, Dimes: 0, Nickles: 1, Pennies:3|
 
-No bugs currently known, but please let me know if you find one so I can correct it.
- 
-## Support and contact details
+## Legal
 
-_Have a bug or an issue with this application? [Open a new issue](https://github.com/dkmerys/project-template/issues) here on GitHub._
+#### MIT License
 
-## Technologies Used
+### Copyright (c) 2020 Daniel Merys and Ethan Alexander Firpo
 
-HTML
-CSS
-Bootstrap
-Git and GitHub
-JavaScript
-jQuery
-Jest
-Babel
-Webpack
-ESLint
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-### Specs
-| Files                      |                 |                         |                   |
-|----------------------------|-----------------|-------------------------|-------------------|
-| __ tests __/app-name.test.js | src/app-name.js | src/index.html          | src/main.js       |
-| src/styles.css             | .babelrc        | .eslintrc               | .gitignore        |
-| package.lock.json          | package.json    | README.md (update this) | webpack.config.js |
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  
 
-
-
-### License
-
-This software is licensed under the MIT license.
-
-Copyright (c) 2020 **_Daniel Merys_**
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
